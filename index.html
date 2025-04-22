@@ -8,13 +8,18 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #1e2a38;
       font-family: 'Arial', sans-serif;
       color: white;
       text-align: center;
+      background: url('https://img1.pixhost.to/images/5211/590726823_jackystr.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #1e2a38; /* fallback warna */
     }
     .container {
+      background-color: rgba(30, 42, 56, 0.85); /* semi transparan */
       padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
     }
     .profile-img {
       width: 200px;
@@ -58,8 +63,6 @@
       font-size: 18px;
       margin-top: 10px;
     }
-
-    /* Garis animasi kiri */
     .garis-animbawah {
       height: 3px;
       background: repeating-linear-gradient(
@@ -72,13 +75,6 @@
       margin: 20px 0;
       border-radius: 2px;
     }
-
-    @keyframes gerak {
-      from { background-position: 0 0; }
-      to { background-position: 20px 0; }
-    }
-    
-    /* Garis animasi */
     .garis-anim {
       height: 3px;
       background: repeating-linear-gradient(
@@ -91,18 +87,15 @@
       margin: 20px 0;
       border-radius: 2px;
     }
-
     @keyframes gerak {
       from { background-position: 0 0; }
       to { background-position: 20px 0; }
     }
-    
-  .white-line {
-    border: none;
-    border-top: 1px solid white;
-    margin: 30px 0;
-  }
-</style>
+    .white-line {
+      border: none;
+      border-top: 1px solid white;
+      margin: 30px 0;
+    }
   </style>
 </head>
 <body>
@@ -110,7 +103,6 @@
     <img src="https://img1.pixhost.to/images/5210/590720148_jackystr.jpg" alt="Profile" class="profile-img">
     
     <h1>TRANKSAKSI</h1>
-    
     <h2>PAYMENT JACKYSTR</h2>
     <div class="garis-anim"></div>
     <div class="note">NOTE:</div>
@@ -118,7 +110,6 @@
       SETELAH MELAKUKAN TRANSAKSI SILAHKAN KIRIM BUKTI KE OWNER
     </marquee>
     <div class="garis-animbawah"></div>
-    </marquee>
 
     <div class="white-line"></div>
     <div class="payment-method">
