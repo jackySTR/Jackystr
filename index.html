@@ -8,18 +8,14 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: #1e2a38;
       font-family: 'Arial', sans-serif;
       color: white;
       text-align: center;
-      background: url('https://img1.pixhost.to/images/5211/590726823_jackystr.jpg') no-repeat center center fixed;
-      background-size: cover;
-      background-color: #1e2a38; /* fallback warna */
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
     }
     .container {
-      background-color: rgba(30, 42, 56, 0.85); /* semi transparan */
       padding: 20px;
-      border-radius: 10px;
-      margin: 20px;
     }
     .profile-img {
       width: 200px;
@@ -57,12 +53,7 @@
     .qr-section {
       margin: 30px 0;
     }
-    .button-red {
-      color: red;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 10px;
-    }
+
     .garis-animbawah {
       height: 3px;
       background: repeating-linear-gradient(
@@ -75,6 +66,7 @@
       margin: 20px 0;
       border-radius: 2px;
     }
+
     .garis-anim {
       height: 3px;
       background: repeating-linear-gradient(
@@ -87,14 +79,42 @@
       margin: 20px 0;
       border-radius: 2px;
     }
+
     @keyframes gerak {
       from { background-position: 0 0; }
       to { background-position: 20px 0; }
     }
+
     .white-line {
       border: none;
       border-top: 1px solid white;
       margin: 30px 0;
+    }
+
+    .btn-qris, .btn-wa {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-qris {
+      background: linear-gradient(45deg, #f39c12, #f1c40f);
+      color: black;
+      box-shadow: 0 0 10px #f1c40f;
+    }
+
+    .btn-wa {
+      background-color: #25D366;
+      color: white;
+      box-shadow: 0 0 10px #25D366;
+    }
+
+    .btn-qris:hover, .btn-wa:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -103,6 +123,7 @@
     <img src="https://img1.pixhost.to/images/5210/590720148_jackystr.jpg" alt="Profile" class="profile-img">
     
     <h1>TRANKSAKSI</h1>
+    
     <h2>PAYMENT JACKYSTR</h2>
     <div class="garis-anim"></div>
     <div class="note">NOTE:</div>
@@ -137,10 +158,10 @@
 
     <div class="white-line"></div>
     <div class="qr-section">
-      <h3>SCAN QR KLICK DI BAWAH</h3>
-      <a href="https://img1.pixhost.to/images/5209/590709151_jackystr.jpg" class="button-red" target="_blank">QRIS ALL PAYMENT</a>
-      <div class="button-red">OWNER</div>
-      <a href="https://wa.me/6285600436967" class="button-blue" target="_blank">JACKYSTR</a>
+      <h3>SCAN QR KLIK DI BAWAH</h3>
+      <a href="https://img1.pixhost.to/images/5209/590709151_jackystr.jpg" class="btn-qris" target="_blank">QRIS ALL PAYMENT</a>
+      <div style="margin-top: 20px;">OWNER</div>
+      <a href="https://wa.me/6285600436967" class="btn-wa" target="_blank">Hubungi via WhatsApp</a>
     </div>
   </div>
 </body>
