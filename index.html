@@ -2,120 +2,105 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transaksi JackySTR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List Produk</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background: url('https://img1.pixhost.to/images/5211/590726823_jackystr.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Arial', sans-serif;
-      color: white;
-      text-align: center;
-    }
-    .container {
-      background-color: rgba(30, 42, 56, 0.9); /* semi-transparent background */
+      font-family: Arial, sans-serif;
       padding: 20px;
-      margin: 0 auto;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      background: #f5f5f5;
     }
-    .profile-img {
-      width: 200px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+
+    .produk-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-    h1 {
-      font-size: 32px;
-      color: #ff4ee1;
-      text-shadow: 0 0 10px #ff4ee1;
-      margin-bottom: 10px;
+
+    .produk {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    h2 {
-      font-size: 20px;
-      color: #7bb4ff;
-      margin: 5px 0 20px;
+
+    .produk h3 {
+      margin-top: 0;
     }
-    .note {
-      color: red;
-      font-weight: bold;
-      margin: 10px 0;
+
+    .produk p {
+      margin: 5px 0;
     }
-    hr {
+
+    .produk button {
+      margin-top: 10px;
+      padding: 8px 15px;
       border: none;
-      border-top: 2px dashed yellow;
-      margin: 20px 0;
-    }
-    .payment-method {
-      margin: 20px 0;
-    }
-    .payment-method img {
-      width: 80px;
-      margin-bottom: 10px;
-    }
-    .qr-section {
-      margin: 30px 0;
-    }
-    .button-red {
-      color: red;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-    a.button-blue {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background-color: #00aaff;
+      background-color: #4CAF50;
       color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    a.button-blue:hover {
-      background-color: #007acc;
+
+    .produk button:hover {
+      background-color: #45a049;
+    }
+
+    /* === Garis Kuning Animasi === */
+    .garis-anim {
+      height: 3px;
+      background: repeating-linear-gradient(
+        to right,
+        yellow 0 10px,
+        transparent 10px 20px
+      );
+      box-shadow: 0 0 10px yellow;
+      animation: gerak 1s linear infinite;
+      margin: 20px 0;
+      border-radius: 2px;
+    }
+
+    @keyframes gerak {
+      from { background-position: 0 0; }
+      to { background-position: 20px 0; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://img1.pixhost.to/images/5210/590720148_jackystr.jpg" alt="Profile" class="profile-img">
-    <h1>TRANKSAKSI</h1>
-    <h2>PAYMENT JACKYSTR</h2>
-    <div class="note">NOTE:</div>
-    <marquee behavior="scroll" direction="left" scrollamount="5" style="color: red; font-weight: bold; margin: 10px 0;">
-      SETELAH MELAKUKAN TRANSAKSI SILAHKAN KIRIM BUKTI KE OWNER
-    </marquee>
-    <hr />
 
-    <div class="payment-method">
-      <img src="https://img1.pixhost.to/images/5210/590714716_jackystr.jpg" alt="Gopay">
-      <div>Gopay : 0895392249321</div>
-    </div>
+  <h1>Daftar Produk</h1>
+  <div class="garis-anim"></div>
 
-    <div class="payment-method">
-      <img src="https://img1.pixhost.to/images/5210/590713855_jackystr.jpg" alt="Dana">
-      <div>Dana : 085600436967</div>
-    </div>
-
-    <div class="payment-method">
-      <img src="https://img1.pixhost.to/images/5210/590714687_jackystr.jpg" alt="BRI">
-      <div>BRI : -<br/>A/N -</div>
-    </div>
-
-    <div class="payment-method">
-      <img src="https://img1.pixhost.to/images/5210/590714641_jackystr.jpg" alt="BNI">
-      <div>BNI : -<br/>A/N -</div>
-    </div>
-
-    <div class="qr-section">
-      <h3>SCAN QR KLICK DI BAWAH</h3>
-      <a href="https://img1.pixhost.to/images/5209/590709151_jackystr.jpg" class="button-red" target="_blank">QRIS ALL PAYMENT</a>
-      <div class="button-red">OWNER</div>
-      <a href="https://wa.me/6285600436967" class="button-blue" target="_blank">JACKYSTR</a>
-    </div>
+  <div class="produk-container" id="produkList">
+    <!-- Produk akan ditambahkan lewat JavaScript -->
   </div>
+
+  <script>
+    const produkList = [
+      { id: 'produk1', nama: 'Nomor Virtual Indonesia', harga: 10000 },
+      { id: 'produk2', nama: 'Nomor Virtual US', harga: 15000 },
+      { id: 'produk3', nama: 'Nomor Virtual UK', harga: 18000 },
+    ];
+
+    const container = document.getElementById('produkList');
+
+    produkList.forEach(produk => {
+      const div = document.createElement('div');
+      div.className = 'produk';
+      div.innerHTML = `
+        <h3>${produk.nama}</h3>
+        <p>Harga: Rp${produk.harga.toLocaleString()}</p>
+        <button onclick="beli('${produk.id}')">Beli</button>
+      `;
+      container.appendChild(div);
+    });
+
+    function beli(produkId) {
+      alert('Produk dibeli: ' + produkId);
+      // Di sini bisa tambahkan proses pembelian (panggil API, redirect Midtrans, dll)
+    }
+  </script>
+
 </body>
 </html>
